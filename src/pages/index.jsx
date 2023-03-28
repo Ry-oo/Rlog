@@ -3,6 +3,7 @@ import styles from "@/styles/Home.module.css";
 import { client } from "../../libs/client";
 import Head from "next/head";
 import Link from "next/link";
+import Sidebar from "./components/sidebar";
 
 export const getStaticProps = async () => {
   const data = await client.get({
@@ -24,12 +25,13 @@ export default function Home({ blog }) {
       <Head>
         <title>Rlog</title>
       </Head>
-      <main>
-        <ul>
+      <main className="flex space-x-14">
+        <Sidebar className="" />
+        <ul className="w-72 space-y-8">
           {blog.map((blog) => (
             <li
               key={blog.id}
-              className="mt-3 min-w-full max-w-md space-y-4 overflow-hidden rounded-br-lg border-2 py-3.5 text-center shadow-lg outline outline-black"
+              className="mt-3 min-w-full max-w-md space-y-4 overflow-hidden rounded-br-lg border-2 py-3.5 text-center shadow-lg outline outline-gray-500"
             >
               <Link
                 href={`/blog/${blog.id}`}
