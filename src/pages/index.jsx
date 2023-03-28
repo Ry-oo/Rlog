@@ -29,11 +29,11 @@ export default function Home({ blog }) {
           {blog.map((blog) => (
             <li
               key={blog.id}
-              className="mt-3 space-y-4 py-3.5 min-w-full max-w-md rounded-br-lg overflow-hidden shadow-lg text-center border-2 outline outline-black"
+              className="mt-3 min-w-full max-w-md space-y-4 overflow-hidden rounded-br-lg border-2 py-3.5 text-center shadow-lg outline outline-black"
             >
               <Link
                 href={`/blog/${blog.id}`}
-                className="text-black hover:text-gray-400 text-xl"
+                className="text-xl text-black hover:text-gray-400"
               >
                 {blog.title}
               </Link>
