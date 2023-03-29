@@ -31,7 +31,7 @@ export default function Home({ blog }) {
           {blog.map((blog) => (
             <li
               key={blog.id}
-              className="mt-3 min-w-full max-w-md space-y-4 overflow-hidden rounded-br-lg border-2 py-3.5 text-center shadow-lg outline outline-gray-500"
+              className="mt-3 min-w-full max-w-md grid-cols-3 space-y-4 rounded-br-lg border-2 py-3.5 text-center shadow-lg outline outline-gray-500"
             >
               <Link
                 href={`/blog/${blog.id}`}
